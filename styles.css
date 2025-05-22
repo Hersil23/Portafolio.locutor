@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+/* estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+/* estilos del nav */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+nav ul li a:hover {
+  color: rgb(241, 243, 239);;
+  transition: 0.3s;
+}
+main header div span {
+  color: rgb(81, 99, 61);
+}
+/* estilos del header */
+header {
+  background-color:#afb973;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: center;
+}
+header img {
+  border: 7px solid rgb(81, 99, 61);
+  border-radius: 3%;
+}
+header > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  gap: 15px;
+}
+header div > p {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  text-align: justify;
+}
+main h2 {
+  padding: 30px 30px 5px 20px;
+}
+/* estilos de la sección de portafolio */
+.seccion-portafolio {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.portafolio-contenido {
+  display: flex;
+  flex-direction: row; /* Acomoda los elementos en una fila */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Espacio entre los elementos */
+}
+.portafolio-contenido div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Estilos de la seccion servicios */
+.seccion-servicios {
+  background: #afb973;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.seccion-servicios div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.seccion-servicios h2 {
+  text-align: center;
+  font-size: 30px;
+}
+.seccion-servicios h3 {
+  text-align: center;
+  font-size: 24px;
+}
+.seccion-servicios p {
+  text-align: justify;
+  font-size: 22px;
+  color: #0f0f07;
+}
+/* Estilos generales para la sección de contacto */
+.seccion-contacto {
+  width: 60%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+
+}
+
+/* Título de contacto */
+.titulo-contacto h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #020202;
+  margin-bottom: 20px;
+}
+
+/* Contenedor del formulario */
+.formulario {
+  background: #afb973;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Título del formulario */
+.titulo-formulario h3 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #070707;
+  margin-bottom: 15px;
+}
+
+/* Estilos para los inputs */
+.input {
+  display: flex;
+  align-items: center;
+  background: #f1f1ef;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input i {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #373837;
+}
+
+.input input, .input textarea {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Botón de envío */
+.button {
+  text-align: center;
+}
+
+.button button {
+  background: #f7f8f6;
+  color: #020202;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background: rgb(81, 99, 61);
+  color: #fff;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+
+/* estilos del footer */
+footer {
+  background-color: #afb973;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  text-align: center;
+  color: rgb(2, 2, 2);
+  font-size: 18px;
+
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0c0c0c;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #f4f4f4;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  background: rgb(81, 99, 61);
+  color: #fff;
+}
