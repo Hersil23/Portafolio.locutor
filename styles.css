@@ -1,21 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+:root {
+  --color-principal: rgb(245, 250, 246);
+  --color-secundario: rgb(175, 185, 115);
+  --color-terciario: rgb(255, 255, 255);
+  --color-cuaternario: rgb(0, 0, 0);
+  --color-quintario: #ff9e02;
+  --titulares: 50px;
+  --subtitulares: 30px;
+  --texto: 20px;
+  --texto-pequeño: 15px;
+}
+
 /* estilos generales */
 * {
   margin: 0;
   padding: 0;
   font-family:Arial, Helvetica, sans-serif;
 }
+
 /* estilos del nav */
 nav {
+  background-color: var(--color-secundario);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
   text-decoration: none;
 }
 nav ul {
   display: flex;
-  gap: 50px;
+  gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -23,18 +38,20 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: black;
-  font-weight: 800;
+  font-weight: 400;
+
 }
 nav ul li a:hover {
-  color: rgb(241, 243, 239);;
+  color: var(--color-principal);
   transition: 0.3s;
 }
 main header div span {
-  color: rgb(81, 99, 61);
+  color: var(--color-secundario);
+  font-size: 40pxx;
 }
 /* estilos del header */
 header {
-  background-color:#afb973;
+  background-color: var(--color-principal);
   padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -42,8 +59,8 @@ header {
   align-content: center;
 }
 header img {
-  border: 7px solid rgb(81, 99, 61);
-  border-radius: 3%;
+  border: 7px solid var(--color-secundario);
+  border-radius: 50%;
 }
 header > div{
   display: flex;
@@ -62,6 +79,13 @@ main h2 {
   padding: 30px 30px 5px 20px;
 }
 /* estilos de la sección de portafolio */
+.titulo {
+  text-align: center;
+  padding-bottom: 30px;
+  text-decoration: underline;
+  text-decoration-color: var(--color-secundario);
+  text-decoration-thickness: 4px;
+}
 .seccion-portafolio {
   display: flex;
   flex-direction: column;
@@ -78,35 +102,32 @@ main h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
- 
 }
-
-
-
-
 /* Estilos de la seccion servicios */
 .seccion-servicios {
-  background: #eceee3;
+  background: var(--color-principal);
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .servicios-contenido {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-  grid-template-rows: repeat(2, auto); /* 2 filas */
-  gap: 20px; /* Espaciado entre elementos */
-  justify-items: center; /* Centra los elementos dentro de su celda */
-  
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 .servicios-contenido div{
-  background-color: #f4f4f4;
+  background-color: var(--color-principal);
   border-radius: 10px;
   padding: 5px;
   text-align: justify;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.servicios-contenido div:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-secundario);
 }
 .seccion-servicios h2 {
   text-align: center;
@@ -115,15 +136,12 @@ main h2 {
 .seccion-servicios h3 {
   text-align: center;
   font-size: 24px;
+  margin-bottom: 15px;
+
 }
-
-
-
-
-
-
-
-
+.seccion-servicios p {
+  margin-bottom: 15px;
+}
 /* Estilos generales para la sección de contacto */
 .seccion-contacto {
   width: 60%;
@@ -146,7 +164,7 @@ main h2 {
 
 /* Contenedor del formulario */
 .formulario {
-  background: #afb973;
+  background: rgb(175, 185, 115);
   padding: 20px;
   border-radius: 10px;
 }
@@ -174,7 +192,7 @@ main h2 {
 .input i {
   font-size: 18px;
   margin-right: 10px;
-  color: #373837;
+  color:var(--color-terciarios);
 }
 
 .input input, .input textarea {
@@ -191,26 +209,22 @@ textarea {
 }
 
 /* Botón de envío */
+
 .button {
+  background: var(--color-secundario);
+  color: var(--color-cuaternario);
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
   text-align: center;
 }
 
-.button button {
-  background: #f7f8f6;
-  color: #020202;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.button button:hover {
-  background: rgb(81, 99, 61);
-  color: #fff;
-  font-weight: bold;
+.button:hover {
+  background: var(--color-principal);
+  color: var(--color-secundario);
   transform: scale(1.05);
 }
 
@@ -234,23 +248,18 @@ ul {
   gap: 15px;
   padding: 0;
 }
-
-li {
-  display: inline-block;
-}
-
 a {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  color: #0c0c0c;
+  color: var(--color-cuaternario);
   padding: 10px 15px;
-  border-radius: 5px;
-  background: #f4f4f4;
+  border-radius: 7px;
+  background: var (--color-principal);
   transition: 0.3s ease-in-out;
-}
 
+}
 a:hover {
-  background: rgb(81, 99, 61);
+  background: var(--color-secundario);
   color: #fff;
 }
